@@ -8,7 +8,7 @@ module.exports = {
 				secondary: 'Sora, sans-serif',
 			},
 			textColor: {
-				primary: '#002F72',
+				primary: '#1D1D1D',
 				secondary: '#FF6634',
 				success: '#08A05C',
 				error: '#F13637',
@@ -16,14 +16,14 @@ module.exports = {
 				lightGrey: '#A9A9A9',
 			},
 			backgroundColor: {
-				primary: '#002F72',
+				primary: '#1D1D1D',
 				secondary: '#FF6634',
 				success: '#08A05C',
 				error: '#F13637',
 				warning: '#EEB614',
 			},
 			borderColor: {
-				primary: '#002F72',
+				primary: '#1D1D1D',
 				secondary: '#FF6634',
 				error: '#F13637',
 				lightGrey: '#A9A9A9',
