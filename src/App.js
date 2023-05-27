@@ -1,8 +1,5 @@
 import React from 'react';
 import {
-	Routes,
-	Route,
-	BrowserRouter,
 	createBrowserRouter,
 	RouterProvider,
 } from 'react-router-dom';
@@ -37,7 +34,7 @@ function Root() {
 		}
 	};
 	const router = createBrowserRouter([
-		{ path: '/', Component: Home },
+		{ path: '/', element: <Home onLogin={login} />},
 		{ path: 'dashboard', Component: DashBoard },
 		{ path: 'business/:id', Component: BusinessDetail },
 

@@ -1,6 +1,7 @@
 import Logo from '../1657004779_50-illustration_svg.svg';
 
-export default function Home(onLogin) {
+export default function Home(props) {
+	console.log(props.onLogin);
 	return (
 		<div className="h-screen">
 			<div className="flex flex-col mx-auto w-4/5 justify-around h-full md:hidden">
@@ -8,7 +9,7 @@ export default function Home(onLogin) {
 				<div>
 					<button
 						className="bg-primary text-white w-full py-3 rounded-md"
-						onClick={() => onLogin()}
+						onClick={() => props.onLogin()}
 					>
 						Login
 					</button>
@@ -31,7 +32,7 @@ export default function Home(onLogin) {
 				<div className="mx-auto w-1/5">
 					<button
 						className="bg-primary text-white w-full py-3 rounded-md"
-						onClick={() => onLogin()}
+						onClick={() => props.onLogin()}
 					>
 						Login
 					</button>
