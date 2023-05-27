@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-	createBrowserRouter,
-	RouterProvider,
-} from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import './App.css';
 import { GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
@@ -33,13 +30,13 @@ function Root() {
 			console(error);
 		}
 	};
-	const router = createBrowserRouter([
-		{ path: '/', element: <Home onLogin={login} />},
-		{ path: 'dashboard', Component: DashBoard },
-		{ path: 'business/:id', Component: BusinessDetail },
+	// const router = createBrowserRouter([
+	// 	{ path: '/', element: <Home onLogin={login} /> },
+	// 	{ path: 'dashboard', Component: DashBoard },
+	// 	{ path: 'business/:id', Component: BusinessDetail },
 
-		{ path: '*', Component: ErrorPage },
-	]);
+	// 	{ path: '*', Component: ErrorPage },
+	// ]);
 
 	// const logOut = () => {
 	// 	googleLogout();
@@ -47,7 +44,11 @@ function Root() {
 	// };
 	return (
 		<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-			<RouterProvider router={router}></RouterProvider>
+			<HashRouter>
+				<Route exact path="/" element={<Home onLogin={login} />} />
+				<Route  path="/dashboard" element={<DashBoard />} />
+
+			</HashRouter>
 		</GoogleOAuthProvider>
 	);
 }
