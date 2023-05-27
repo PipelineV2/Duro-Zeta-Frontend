@@ -45,9 +45,12 @@ function Root() {
 	return (
 		<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
 			<HashRouter>
-				<Route exact path="/" element={<Home onLogin={login} />} />
-				<Route  path="/dashboard" element={<DashBoard />} />
-
+				<Route exact path="/">
+					<Home onLogin={login} />
+				</Route>
+				<Route exact path="/dashboard">
+					<DashBoard />
+				</Route>
 			</HashRouter>
 		</GoogleOAuthProvider>
 	);
