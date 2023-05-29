@@ -1,4 +1,5 @@
 import Logo from '../1657004779_50-illustration_svg.svg';
+import { Link } from 'react-router-dom';
 
 export default function Home(props) {
 	console.log(props.onLogin);
@@ -6,13 +7,21 @@ export default function Home(props) {
 		<div className="h-screen">
 			<div className="flex flex-col mx-auto w-4/5 justify-around h-full md:hidden">
 				<h2 className="text-center font-bold text-5xl uppercase">Duro</h2>
+				<div className="text-center">
+					<h2 className="text-xl font-primary font-semibold my-3">
+						Get notified when it's your turn. No more waiting!
+					</h2>
+					<h5 className="text-lg mx-auto">
+						Lorem ipsum dolor sit amet consectetur. At vitae arcu elementum
+						aliquam.
+					</h5>
+				</div>
 				<div>
-					<button
-						className="bg-primary text-white w-full py-3 rounded-md"
-						onClick={() => props.onLogin()}
-					>
-						Login
-					</button>
+					<Link to="/login">
+						<button className="bg-primary text-white w-full py-3 rounded-md">
+							Get Started
+						</button>
+					</Link>
 				</div>
 			</div>
 
@@ -30,12 +39,11 @@ export default function Home(props) {
 					</h5>
 				</div>
 				<div className="mx-auto w-1/5">
-					<button
-						className="bg-primary text-white w-full py-3 rounded-md"
-						onClick={() => props.onLogin()}
-					>
-						Login
-					</button>
+					<Link to="/login">
+						<button className="bg-primary text-white w-full py-3 rounded-md">
+							Get Started
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

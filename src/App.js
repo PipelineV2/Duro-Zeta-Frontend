@@ -1,13 +1,10 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
 import './App.css';
 import { GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
-import Home from './pages/Home';
-import DashBoard from './pages/Dashboard';
-import Business from './components/Business';
-import BusinessDetail from './pages/BusinessDetail';
-import ErrorPage from './pages/ErrorPage';
+import { AuthProvider } from './hooks/auth-context';
+
+import Routes from './router';
 
 function Root() {
 	// const [user, setUser] = useState([]);
@@ -44,14 +41,9 @@ function Root() {
 	// };
 	return (
 		<GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
-			<HashRouter>
-				<Route exact path="/">
-					<Home onLogin={login} />
-				</Route>
-				<Route exact path="/dashboard">
-					<DashBoard />
-				</Route>
-			</HashRouter>
+			<AuthProvider>
+				<Routes />
+			</AuthProvider>
 		</GoogleOAuthProvider>
 	);
 }
