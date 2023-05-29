@@ -1,19 +1,18 @@
 {
   "files": {
-    "main.css": "/Duro-Zeta-Frontend/static/css/main.f7124b21.css",
-    "main.js": "/Duro-Zeta-Frontend/static/js/main.c602bb88.js",
+    "main.css": "/Duro-Zeta-Frontend/static/css/main.97195c07.css",
+    "main.js": "/Duro-Zeta-Frontend/static/js/main.5582824a.js",
     "static/js/787.e51992ef.chunk.js": "/Duro-Zeta-Frontend/static/js/787.e51992ef.chunk.js",
-    "static/media/Not_found.jpg": "/Duro-Zeta-Frontend/static/media/Not_found.ce293654fc5b055593cf.jpg",
     "service-worker.js": "/Duro-Zeta-Frontend/service-worker.js",
     "static/media/1657004779_50-illustration_svg.svg": "/Duro-Zeta-Frontend/static/media/1657004779_50-illustration_svg.afd41b53691db2a94f53a3f28f490c4e.svg",
     "static/media/qr_code_scanner.svg": "/Duro-Zeta-Frontend/static/media/qr_code_scanner.61ef9993f285900e8c7d0daee1667197.svg",
     "index.html": "/Duro-Zeta-Frontend/index.html",
-    "main.f7124b21.css.map": "/Duro-Zeta-Frontend/static/css/main.f7124b21.css.map",
-    "main.c602bb88.js.map": "/Duro-Zeta-Frontend/static/js/main.c602bb88.js.map",
+    "main.97195c07.css.map": "/Duro-Zeta-Frontend/static/css/main.97195c07.css.map",
+    "main.5582824a.js.map": "/Duro-Zeta-Frontend/static/js/main.5582824a.js.map",
     "787.e51992ef.chunk.js.map": "/Duro-Zeta-Frontend/static/js/787.e51992ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7124b21.css",
-    "static/js/main.c602bb88.js"
+    "static/css/main.97195c07.css",
+    "static/js/main.5582824a.js"
   ]
 }
