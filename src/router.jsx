@@ -1,12 +1,24 @@
-import { Route, Routes } from 'react-router-dom';
-import pagesData from './pagesData';
-
+import { HashRouter, Route } from 'react-router-dom';
+import history from './hooks/history';
+import Home from './pages/Home';
+import DashBoard from './pages/Dashboard';
+import Spinner from './components/Spinner';
+import Login from './pages/Login';
 const Router = () => {
-	const pageRoutes = pagesData.map(({ path, title, element }) => {
-		return <Route key={title} path={`/${path}`} element={element} />;
-	});
-
-	return <Routes>{pageRoutes}</Routes>;
+	return (
+		<HashRouter history={history}>
+			<Spinner />
+			<Route exact path="/">
+				<Home />
+			</Route>
+			<Route exact path="/dashboard">
+				<DashBoard />
+			</Route>
+			<Route exact path="/login">
+				<Login />
+			</Route>
+		</HashRouter>
+	);
 };
 
 export default Router;
